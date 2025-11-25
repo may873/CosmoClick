@@ -1,0 +1,104 @@
+* {
+    
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(fondo3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #e6e6ff; /* Color de texto blanco-azulado claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.navega, li{
+    list-style: none;
+    display: inline-block;
+    font-weight: 300; /* Fuente más ligera */
+    letter-spacing: 2px; /* Espacio entre letras para un título épico */
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.7); /* Brillo azul sutil */
+    
+}
+
+
+nav ul li a{
+    font-weight: 600;
+    padding-right: 10px;
+    text-align: center;
+    color: rgb(127, 172, 255);
+}
+
+main {
+    max-width: 1200px; /* Ancho máximo para el contenido principal */
+    margin: 20px auto; /* Centra el contenido y añade espacio superior/inferior */
+    padding: 0 20px;
+}
+
+
+header {
+    background: linear-gradient(135deg, #1f3f6600, #142a4200); /* Degradado sutil */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 0; /* Ocupa todo el ancho */
+    margin-bottom: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra dramática */
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 300; /* Fuente más ligera */
+    letter-spacing: 2px; /* Espacio entre letras para un título épico */
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.7); /* Brillo azul sutil */
+}
+
+
+.planeta-card {
+    background-color: #1a2c419a; /* Fondo de tarjeta un poco más claro que el body */
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Sombra para efecto flotante */
+    border: 1px solid #336699; /* Borde sutil */
+    
+    
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para el hover */
+}
+
+/* Efecto al pasar el mouse */
+.planeta-card:hover {
+    transform: translateY(-5px); /* Se eleva un poco */
+    box-shadow: 0 12px 25px rgba(0, 191, 255, 0.3); /* Sombra con brillo azul */
+}
+
+
+.planeta-card img {
+    width: 160px; /* Un poco más grande */
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Borde temático: anillo brillante */
+    border: 5px solid #00bfff; /* Color de cielo/neón */
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.8); /* Brillo alrededor */
+}
+
+.planeta-info h1 {
+    color: #ffcc00; /* Color amarillo/dorado para el título */
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #336699; /* Separador sutil */
+    padding-bottom: 5px;
+}
+
+.planeta-info p {
+    color: #c7d2e0; /* Color más suave para el párrafo */
+    font-size: 1.1em;
+}
