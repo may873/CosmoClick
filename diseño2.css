@@ -1,0 +1,151 @@
+/* ======== ESTILOS GENERALES ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(estrellado.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+    background: rgba(10, 20, 40, 0.95);
+    color: #ffffff;
+    padding: 1.5em 2em;
+    text-align: center;
+    border-bottom: 2px solid #5bc0be;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size: 2.2em;
+    letter-spacing: 2px;
+    color: #98c1d9;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 10px rgba(152,193,217,0.5);
+}
+
+/* ======== MENÚ DE NAVEGACIÓN ======== */
+.generos ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.generos a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+.generos a:hover {
+    color: #5bc0be;
+    border-bottom: 2px solid #5bc0be;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+main {
+    flex: 1;
+    padding: 2em;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+/* ======== TARJETAS ======== */
+.planeta-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planeta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(91,192,190,0.3);
+}
+
+.planeta-card h3 {
+    color: #5bc0be;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.planeta-card p {
+    color: #e0e0e0;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.planeta-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.4s;
+}
+
+.planeta-card img:hover {
+    transform: scale(1.05);
+}
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+    background: #0b132b;
+    text-align: center;
+    padding: 1.5em;
+    border-top: 2px solid #5bc0be;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+footer p, footer h5 {
+    margin: 5px 0;
+}
+
+footer h5 {
+    color: #5bc0be;
+    font-weight: 400;
+}
+
+/* ======== ADAPTABILIDAD ======== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    .planeta-card img {
+        height: 180px;
+    }
+
+    .generos ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
