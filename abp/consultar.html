@@ -1,0 +1,60 @@
+<?php
+	include("conexion.php");
+?>
+
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title> Consultar registros</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="table.css">
+	</head>
+	<body>
+		<div id="table-container"> 
+			<br>
+			<h1>Mi escuela </h1>
+			<h3>Consulta de registros </h3>
+				<table>
+					<thead>
+						<tr>
+							<th> Registro</th>
+							<th> No. de Control</th>
+							<th> Apellido Paterno</th>
+							<th> Apellido Maternoo</th>
+							<th> Nombre</th>
+							<th> Sexo</th>
+							<th> Fecha de nacimiento</th>
+							<th> Edad</th>
+							<th> Dirección</th>
+							<th> Telefono</th>
+							<th> Correo electrónico</th>
+						</tr>
+					</thead>
+					
+					<tr>
+						<?php 
+							$consulta="SELECT * from estudiantes";
+							$resultado=mysqli_query($conexion, $consulta);
+							while($mostrar=mysqli_fetch_array($resultado)){
+						?>
+						<td><?php echo $mostrar['idEstudiante'] ?></td>
+						<td><?php echo $mostrar['noControl'] ?></td>
+						<td><?php echo $mostrar['aPaterno'] ?></td>
+						<td><?php echo $mostrar['aMaterno'] ?></td>
+						<td><?php echo $mostrar['nombre'] ?></td>
+						<td><?php echo $mostrar['sexo'] ?></td>
+						<td><?php echo $mostrar['fechNaciomiento'] ?></td>
+						<td><?php echo $mostrar['edad'] ?></td>
+						<td><?php echo $mostrar['dirrecion'] ?></td>
+						<td><?php echo $mostrar['telefono'] ?></td>
+						<td><?php echo $mostrar['correo'] ?></td>
+					</tr>
+						<?php 
+							}
+						?>
+
+				</table>
+		</div>
+	</body>
+
+</html>

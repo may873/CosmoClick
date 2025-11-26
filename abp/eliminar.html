@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Eliminar Estudiante</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .btn {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Eliminar Estudiante</h1>
+        
+        <div class="warning">
+            <strong>¡Advertencia!</strong> Esta acción no se puede deshacer.
+        </div>
+        
+        <form action="eliminiar.php" method="POST" onsubmit="return confirm('¿Está seguro de que desea eliminar este registro?');">
+            <div class="form-group">
+                <label for="id">ID del Estudiante a eliminar:</label>
+                <input type="number" id="id" name="id" required>
+            </div>
+            
+            <button type="submit" class="btn">Eliminar Registro</button>
+            <a href="consultar.html" style="text-decoration: none; padding: 10px 20px; background-color: #6c757d; color: white; border-radius: 4px;">Cancelar</a>
+        </form>
+        
+        <br>
+        <a href="consultar.html">Ver todos los registros</a> | 
+        <a href="editar.php">Editar registros</a>
+    </div>
+</body>
+</html>
