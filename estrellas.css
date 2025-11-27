@@ -1,0 +1,147 @@
+/*
+ * Hoja de Estilos CSS para "Resumen Cósmico: Fenómenos y Estrellas"
+ * Estilos basados en la estructura proporcionada.
+ */
+
+/* 🌌 Estilos Globales y Base ---------------------------------------------------- */
+body {
+    /* Fuente y espaciado base */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    
+    background-image: url(estrellado.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #f5f5f5cb;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+}
+
+/* 🚀 Encabezado (Header) -------------------------------------------------------- */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #294e74e5; /* Gris oscuro para el fondo del encabezado */
+    color: rgba(255, 255, 255, 0.938);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+/* 🌠 Secciones (Section) -------------------------------------------------------- */
+.seccion {
+    background-color: rgba(122, 115, 224, 0.123);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    margin-bottom: 40px;
+    transition: transform 0.3s ease; /* Transición para efecto hover */
+}
+
+.seccion:hover {
+    transform: translateY(-3px); /* Pequeño levantamiento al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de Sección (H2) */
+h2 {
+    color: #007bff; /* Azul primario */
+    margin-top: 0;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 🔭 Lista de Definición (DL/DT/DD) -------------------------------------------- */
+dl {
+    margin-top: 15px;
+}
+
+/* Término (Título del Fenómeno/Estrella) */
+dt {
+    font-weight: bold;
+    margin-top: 30px; /* Más espacio entre elementos */
+    color: #212529;
+    font-size: 1.25em;
+    border-left: 6px solid #007bff; /* Línea azul más ancha */
+    padding-left: 15px;
+    background-color: #89b8e7d7; /* Fondo ligero para resaltar el título */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Descripción */
+dd {
+    margin-left: 0;
+    padding: 10px 0 20px 15px; /* Ajuste de padding */
+    border-bottom: 1px dashed #ced4da; /* Línea punteada */
+    text-align: justify;
+}
+
+dd:last-of-type {
+    border-bottom: none;
+}
+
+/* 🖼️ Estilos para las Imágenes -------------------------------------------------- */
+.contenido-imagen {
+    display: block;
+    margin: 15px auto; /* Centrar y más espacio */
+    text-align: center;
+}
+
+.contenido-imagen img {
+    max-width: 90%; /* Hace que la imagen sea responsive, 90% del contenedor */
+    height: auto;
+    border-radius: 6px; /* Borde ligeramente más redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más definida */
+    transition: transform 0.3s ease;
+}
+
+.contenido-imagen img:hover {
+    transform: scale(1.02);  /* Pequeño zoom al pasar el ratón */
+}
+
+/* Placeholder para la descripción de imagen faltante */
+.imagen-placeholder { 
+    font-style: italic; 
+    color: #6c757d; 
+    display: block; 
+    margin-top: 10px; 
+    font-size: 0.9em; 
+    text-align: center;
+}
+
+/* ⚙️ Pie de Página (Footer) ------------------------------------------------------- */
+footer {
+    border-top: 1px solid #adb5bd; /* Separador */
+    margin-top: 30px;
+    padding-top: 15px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.85em;
+    color: #ebedf0;
+    padding: 0 20px 20px 20px;
+    margin: 0;
+}
+
+/* Enfatizar texto en el footer */
+footer p strong {
+    color: #343a40;
+}
